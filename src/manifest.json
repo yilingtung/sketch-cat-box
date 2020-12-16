@@ -3,8 +3,8 @@
   "bundleVersion": 1,
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "test-plugin.my-command-identifier",
+      "name": "copy-pro",
+      "identifier": "copy-pro.my-command-identifier",
       "script": "./my-command.js",
       "handlers": {
         "run": "onRun",
@@ -15,9 +15,9 @@
     }
   ],
   "menu": {
-    "title": "test-plugin",
+    "title": "copy-pro",
     "items": [
-      "test-plugin.my-command-identifier"
+      "copy-pro.my-command-identifier"
     ]
   }
 }

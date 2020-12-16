@@ -1,12 +1,16 @@
 import BrowserWindow from 'sketch-module-web-view'
 import { getWebview } from 'sketch-module-web-view/remote'
 import UI from 'sketch/ui'
+import sketch from 'sketch'
 
-const webviewIdentifier = 'test-plugin.webview'
+const webviewIdentifier = 'HuLanNi.webview'
 
 export default function () {
   const options = {
-    identifier: webviewIdentifier,
+	identifier: webviewIdentifier,
+	resizable: false,
+	title: 'Copy Pro',
+	alwaysOnTop: true,
     width: 240,
     height: 180,
     show: false
@@ -23,12 +27,15 @@ export default function () {
 
   // print a message when the page loads
   webContents.on('did-finish-load', () => {
-    UI.message('UI loaded!')
+    UI.message('Ni hao 🤘🏻')
   })
 
   // add a handler for a call from web content's javascript
-  webContents.on('nativeLog', s => {
-    UI.message(s)
+  webContents.on('changeText', s => {
+	const document = sketch.getSelectedDocument()
+	const textLayer = document.selectedLayers.layers[0]
+	textLayer.text = s
+	
     webContents
       .executeJavaScript(`setRandomNumber(${Math.random()})`)
       .catch(console.error)

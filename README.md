@@ -1,10 +1,10 @@
-# test-plugin
+# copy-pro
 
 ## Installation
 
-- [Download](../../releases/latest/download/test-plugin.sketchplugin.zip) the latest release of the plugin
+- [Download](../../releases/latest/download/copy-pro.sketchplugin.zip) the latest release of the plugin
 - Un-zip
-- Double-click on test-plugin.sketchplugin
+- Double-click on copy-pro.sketchplugin
 
 ## Development Guide
 

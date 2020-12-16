@@ -1,5 +1,5 @@
 # build artefacts
-test-plugin.sketchplugin
+copy-pro.sketchplugin
 
 # npm
 node_modules

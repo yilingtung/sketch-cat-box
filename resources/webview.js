@@ -1,14 +1,25 @@
-// disable the context menu (eg. the right click menu) to have a more native feel
-document.addEventListener('contextmenu', (e) => {
-  e.preventDefault()
-})
+import React, { useState } from'react';
+import ReactDOM from 'react-dom';
+import getBullshit from './requests/getBullshit';
 
-// call the plugin from the webview
-document.getElementById('button').addEventListener('click', () => {
-  window.postMessage('nativeLog', 'Called from the webview')
-})
+const App = () => {
+	const [value, setVaue] = useState('');
+	const [min, setMin] = useState(10);
 
-// call the webview from the plugin
-window.setRandomNumber = (randomNumber) => {
-  document.getElementById('answer').innerHTML = 'Random number from the plugin: ' + randomNumber
+	const saveClick = async () => {
+		const data = await getBullshit(value, min);
+		if (data){
+			window.postMessage('changeText', data);
+		}
+	}
+
+	return (
+		<div>
+			<input onChange={e => setVaue(e.target.value)} value={value} />
+			<input onChange={e => setMin(e.target.value)} value={min} />
+			<button onClick={saveClick}>save</button>
+		</div>
+	);
 }
+
+ReactDOM.render(<App />, document.getElementById('app'));
