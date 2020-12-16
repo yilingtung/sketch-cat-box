@@ -11,9 +11,10 @@ export default function () {
 	resizable: false,
 	title: 'Copy Pro',
 	alwaysOnTop: true,
-    width: 240,
-    height: 180,
-    show: false
+	fullscreenable: false,
+	width: 400,
+	height: 414,
+	show: false
   }
 
   const browserWindow = new BrowserWindow(options)
