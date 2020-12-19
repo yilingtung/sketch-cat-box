@@ -4,7 +4,7 @@ const getBullshit = async (text, length) => {
 		const data = await fetch('https://api.howtobullshit.me/bullshit', {
 			method: 'POST',
 			body: JSON.stringify({
-				MinLen: parseInt(`${length}`, 10),
+				MinLen: parseInt(`${length}`, 20),
 				Topic: text,
 			}),
 		})

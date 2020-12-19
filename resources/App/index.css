@@ -1,14 +1,47 @@
 .app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	padding: 40px 30px;
 
 	& > .header {
+		display: flex;
+		margin-bottom: 30px;
+
+		& > .photo {
+			position: relative;
+			width: 56px;
+			height: 56px;
+			background-size: cover;
+			background-position: center;
+			overflow: hidden;
+			margin-right: 12px;
+
+			&:after {
+				position: absolute;
+				left: -50%;
+				top: -50%;
+				width: 200%;
+				height: 200%;
+				content: '';
+				background: repeating-conic-gradient(#f8b090 0 30deg, #fffad1 0 60deg);
+				z-index: -1;
+				animation: rotate 16s infinite linear;
+			}
+		}
+
 		& > .content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
 			& > .title {
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 24px;
 				letter-spacing: 0.6px;
 				color: #252525;
+				margin-bottom: 4px;
 			}
 
 			& > .description {
@@ -21,4 +54,29 @@
 		}
 	}
 
+	& > .content {
+		display: flex;
+		flex-direction: column;
+
+		& > *:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	& > button {
+		display: inline-flex;
+		align-self: flex-end;
+		justify-self: flex-end;
+		margin-top: auto;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(359deg);
+	}
 }

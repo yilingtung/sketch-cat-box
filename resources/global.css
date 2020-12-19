@@ -1,7 +1,8 @@
 /* some default styles to make the view more native like */
 
 html {
- background-color: white;
+	background-color: white;
+	height: 100%;
 }
 
 *,
@@ -29,9 +30,20 @@ button {
 	font-family: 'PingFangTC-Regular', 'Microsoft JhengHei', sans-serif;
 }
 
+body {
+	margin: 0;
+	height: 100%;
+
+	& > div {
+		height: 100%;
+	}
+}
+
 input, textarea {
-  -webkit-user-select: auto;
-  user-select: auto;
+	margin: 0;
+	border: none;
+	-webkit-user-select: auto;
+	user-select: auto;
 }
 
 a {
