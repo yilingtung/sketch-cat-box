@@ -1,4 +1,6 @@
 const path = require('path');
+const atImport = require('postcss-import');
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = function (config, entry) {
   config.node = entry.isPluginCommand ? false : {
@@ -36,6 +38,20 @@ module.exports = function (config, entry) {
           importLoaders: 1,
         },
       },
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: false,
+          ident: 'postcss',
+          plugins: () => [
+            atImport(),
+            postcssPresetEnv({
+              stage: 0,
+              preserve: false,
+            }),
+          ],
+        },
+      },
     ]
   })
   config.module.rules.push({
@@ -48,7 +64,12 @@ module.exports = function (config, entry) {
         options: {
           sourceMap: false,
         },
-      },
+      }
     ]
+  })
+  config.module.rules.push({
+    test: /\.(jpe?g|png|gif)$/,
+    include: path.join(__dirname, 'assets'),
+    loader: 'url-loader',
   })
 }
