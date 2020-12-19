@@ -1,0 +1,50 @@
+/* some default styles to make the view more native like */
+
+html {
+ background-color: white;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	font-family: 'PingFangTC-Regular', 'Microsoft JhengHei', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	outline: none;
+
+	/* Prevent the content from being selectionable */
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+	-webkit-font-smoothing: antialiased;
+	font-family: 'PingFangTC-Regular', 'Microsoft JhengHei', sans-serif;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
