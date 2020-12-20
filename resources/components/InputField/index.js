@@ -1,4 +1,4 @@
-import React from'react';
+import React from 'react';
 import classnames from 'classnames';
 
 import styles from './index.css';
@@ -8,16 +8,14 @@ const InputField = ({
 	label = '',
 	placeholder = '',
 	value = '',
-	onChange = () => {}
+	onChange = () => {},
 }) => {
 	return (
 		<div className={classnames(styles.inputField, className)}>
-			<div className={styles.label}>
-				{label}
-			</div>
+			<div className={styles.label}>{label}</div>
 			<input value={value} placeholder={placeholder} onChange={onChange} />
 		</div>
 	);
-}
+};
 
 export default InputField;

@@ -1,23 +1,21 @@
 {
-  "compatibleVersion": 3,
-  "bundleVersion": 1,
-  "commands": [
-    {
-      "name": "copy-pro",
-      "identifier": "copy-pro.my-command-identifier",
-      "script": "./my-command.js",
-      "handlers": {
-        "run": "onRun",
-        "actions": {
-          "Shutdown": "onShutdown"
-        }
-      }
-    }
-  ],
-  "menu": {
-    "title": "copy-pro",
-    "items": [
-      "copy-pro.my-command-identifier"
-    ]
-  }
+	"compatibleVersion": 3,
+	"bundleVersion": 1,
+	"commands": [
+		{
+			"name": "copy-pro",
+			"identifier": "copy-pro.my-command-identifier",
+			"script": "./my-command.js",
+			"handlers": {
+				"run": "onRun",
+				"actions": {
+					"Shutdown": "onShutdown"
+				}
+			}
+		}
+	],
+	"menu": {
+		"title": "copy-pro",
+		"items": ["copy-pro.my-command-identifier"]
+	}
 }

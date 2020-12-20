@@ -39,7 +39,8 @@ body {
 	}
 }
 
-input, textarea {
+input,
+textarea {
 	margin: 0;
 	border: none;
 	-webkit-user-select: auto;

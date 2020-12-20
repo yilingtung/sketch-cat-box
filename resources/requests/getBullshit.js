@@ -1,4 +1,3 @@
-
 const getBullshit = async (text, length) => {
 	try {
 		const data = await fetch('https://api.howtobullshit.me/bullshit', {
@@ -8,8 +7,8 @@ const getBullshit = async (text, length) => {
 				Topic: text,
 			}),
 		})
-		.then(response => response.text())
-		.then(text => text);
+			.then((response) => response.text())
+			.then((text) => text);
 
 		return data.replace(/&nbsp;/g, '');
 	} catch (e) {
