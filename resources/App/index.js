@@ -9,14 +9,17 @@ import InputField from '../components/InputField';
 import styles from './index.css';
 
 const App = () => {
+	const [loading, changeLoading] = useState(false);
 	const [value, setVaue] = useState('');
 	const [min, setMin] = useState(20);
 
 	const saveClick = async () => {
+		changeLoading(true);
 		const data = await getBullshit(value, min);
 		if (data){
 			window.postMessage('changeText', data);
 		}
+		changeLoading(false);
 	}
 
 	return (
@@ -45,7 +48,17 @@ const App = () => {
 					onChange={e => setMin(e.target.value)}
 				/>
 			</div>
-			<Button onClick={saveClick}>Generate</Button>
+			<Button
+				isLoading={loading}
+				onClick={() => {
+					if (loading) {
+						return;
+					}
+					saveClick();
+				}}
+			>
+				Generate
+			</Button>
 		</div>
 	);
 }

@@ -1,5 +1,9 @@
 .button {
+	display: inline-flex;
+	justify-content: center;
+	position: relative;
 	height: 40px;
+	min-width: 45px;
 	padding: 0 16px;
 	background-color: #4066FF;
 	border-radius: 100px;
@@ -13,5 +17,19 @@
 
 	&:hover {
 		background-color: #2f51db;
+	}
+
+	&.loading {
+		background-color: #748ffb;
+
+		& > .main-text {
+			opacity: 0;
+		}
+
+		&::after {
+			position: absolute;
+			content: '...';
+			color: white;
+		}
 	}
 }

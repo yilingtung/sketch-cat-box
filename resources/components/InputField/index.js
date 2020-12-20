@@ -1,4 +1,5 @@
 import React from'react';
+import classnames from 'classnames';
 
 import styles from './index.css';
 
@@ -10,7 +11,7 @@ const InputField = ({
 	onChange = () => {}
 }) => {
 	return (
-		<div className={styles.inputField}>
+		<div className={classnames(styles.inputField, className)}>
 			<div className={styles.label}>
 				{label}
 			</div>

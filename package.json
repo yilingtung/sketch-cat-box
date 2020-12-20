@@ -40,6 +40,7 @@
     "resources/**/*.js"
   ],
   "dependencies": {
+    "classnames": "^2.2.6",
     "sketch-module-web-view": "^3.1.4"
   },
   "author": "irene <irene277299@gmail.com>"
