@@ -34,8 +34,21 @@ export default function () {
 	// add a handler for a call from web content's javascript
 	webContents.on('changeText', (s) => {
 		const document = sketch.getSelectedDocument();
-		const textLayer = document.selectedLayers.layers[0];
-		textLayer.text = s;
+		const textLayers = document.selectedLayers.layers;
+
+		if (textLayers.length !== 0) {
+			for (let i = 0; i < textLayers.length; i += 1) {
+				textLayers[i].text = s;
+			}
+		} else {
+			const selectedPage = document.selectedPage;
+			const myArtboard = selectedPage.layers[0];
+
+			new sketch.Text({
+				text: s,
+				parent: myArtboard,
+			});
+		}
 
 		webContents.executeJavaScript(`setRandomNumber(${Math.random()})`).catch(console.error);
 	});
