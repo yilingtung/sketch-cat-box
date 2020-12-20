@@ -4,6 +4,10 @@
   "engines": {
     "sketch": ">=3.0"
   },
+  "repository" : {
+    "type": "git",
+    "url": "git+https://github.com/irene1113/copy-pro.git"
+  },
   "skpm": {
     "name": "copy-pro",
     "manifest": "src/manifest.json",
