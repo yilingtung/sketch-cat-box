@@ -6,7 +6,7 @@ It is a Sketch plugin to generate some text and copy paste automatically.
 
 ### Install
 
-1. Download and unzip: [copy-pro.sketchplugin.zip](https://github.com/irene1113/copy-pro/files/5721045/copy-pro.sketchplugin.zip).
+1. Download and unzip: [copy-pro.sketchplugin.zip](https://github.com/irene1113/copy-pro/files/5721166/copy-pro.sketchplugin.zip).
 2. Double click `copy-pro.sketchplugin`.
 
 ### Other
