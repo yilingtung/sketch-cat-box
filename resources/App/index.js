@@ -1,6 +1,6 @@
 import React, { useState } from'react';
 
-import catImage from '../../assets/cat.png';
+import catImage from '../../assets/tiger.png';
 import getBullshit from '../requests/getBullshit';
 
 import Button from '../components/Button';

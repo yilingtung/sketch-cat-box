@@ -13,7 +13,7 @@ export default function () {
 	alwaysOnTop: true,
 	fullscreenable: false,
 	width: 400,
-	height: 414,
+	height: 420,
 	show: false
   }
 
