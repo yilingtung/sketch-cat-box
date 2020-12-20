@@ -1,9 +1,12 @@
 {
+	"name": "copy-pro",
+	"description": "🚀 Generate some text and copy paste automatically.",
+	"author": "Irene Tung",
 	"compatibleVersion": 3,
 	"bundleVersion": 1,
 	"commands": [
 		{
-			"name": "copy-pro",
+			"name": "copy paste",
 			"identifier": "copy-pro.my-command-identifier",
 			"script": "./my-command.js",
 			"handlers": {
@@ -17,5 +20,6 @@
 	"menu": {
 		"title": "copy-pro",
 		"items": ["copy-pro.my-command-identifier"]
-	}
+	},
+	"icon": "icon.png"
 }
