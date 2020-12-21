@@ -3,13 +3,13 @@ import { getWebview } from 'sketch-module-web-view/remote';
 import UI from 'sketch/ui';
 import sketch from 'sketch';
 
-const webviewIdentifier = 'HuLanNi.webview';
+const webviewIdentifier = 'sketch-cat-box.webview';
 
 export default function () {
 	const options = {
 		identifier: webviewIdentifier,
 		resizable: false,
-		title: 'Copy Pro',
+		title: '喵喵喵',
 		alwaysOnTop: true,
 		fullscreenable: false,
 		width: 400,

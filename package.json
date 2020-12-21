@@ -1,17 +1,17 @@
 {
-  "name": "copy-pro",
+  "name": "sketch-cat-box",
   "version": "0.1.0",
   "engines": {
     "sketch": ">=3.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/irene1113/copy-pro.git"
+    "url": "git+https://github.com/irene1113/sketch-cat-box.git"
   },
   "skpm": {
-    "name": "copy-pro",
+    "name": "sketch-cat-box",
     "manifest": "src/manifest.json",
-    "main": "copy-pro.sketchplugin",
+    "main": "sketch-cat-box.sketchplugin",
     "assets": [
       "assets/**/*"
     ],

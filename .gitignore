@@ -1,5 +1,5 @@
 # build artefacts
-copy-pro.sketchplugin
+sketch-cat-box.sketchplugin
 
 # npm
 node_modules

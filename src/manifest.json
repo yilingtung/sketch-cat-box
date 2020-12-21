@@ -1,13 +1,13 @@
 {
-	"name": "copy-pro",
+	"name": "cat-box",
 	"description": "🚀 Generate some text and copy paste automatically.",
 	"author": "Irene Tung",
 	"compatibleVersion": 3,
 	"bundleVersion": 1,
 	"commands": [
 		{
-			"name": "copy paste",
-			"identifier": "copy-pro.my-command-identifier",
+			"name": "Meow Meow",
+			"identifier": "meow.my-command-identifier",
 			"script": "./my-command.js",
 			"handlers": {
 				"run": "onRun",
@@ -18,8 +18,8 @@
 		}
 	],
 	"menu": {
-		"title": "copy-pro",
-		"items": ["copy-pro.my-command-identifier"]
+		"title": "Cat Box",
+		"items": ["meow.my-command-identifier"]
 	},
 	"icon": "icon.png"
 }
