@@ -8,12 +8,16 @@
 	background-color: #4066ff;
 	border-radius: 100px;
 	border: none;
-	color: white;
-	font-size: 14px;
-	line-height: 22px;
-	letter-spacing: 0.4px;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
+
+	& > .main-text {
+		color: white;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 0.4px;
+		font-weight: 600;
+	}
 
 	&:hover {
 		background-color: #2f51db;

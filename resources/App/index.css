@@ -67,6 +67,7 @@
 		display: inline-flex;
 		align-self: flex-end;
 		justify-self: flex-end;
+		align-items: center;
 		margin-top: auto;
 	}
 }

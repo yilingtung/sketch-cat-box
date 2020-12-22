@@ -1,6 +1,7 @@
 .input-field {
 	& > .label {
 		font-size: 14px;
+		font-weight: 600;
 		line-height: 22px;
 		letter-spacing: 0.4px;
 		color: #7c7c7c;
@@ -13,5 +14,6 @@
 		padding: 0 16px;
 		background-color: #f2f3f5;
 		border-radius: 8px;
+		font-size: 14px;
 	}
 }
